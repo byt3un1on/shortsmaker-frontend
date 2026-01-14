@@ -1,0 +1,7 @@
+services:
+  app:
+    build: .
+    container_name: shortsmaker-frontend-release
+    ports:
+      - "54545:80"
+    restart: always
