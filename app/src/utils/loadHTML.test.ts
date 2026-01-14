@@ -1,4 +1,4 @@
-import { loadHTML } from "../utils/loadHTML";
+import { loadHTML } from "./loadHTML";
 
 describe("loadHTML", () => {
   beforeEach(() => {

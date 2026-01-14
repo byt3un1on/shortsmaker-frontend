@@ -1,11 +1,11 @@
-import { HomePage } from "../pages/home/index";
-import { Header } from "../pages/home/components/header/header";
-import { Hero } from "../pages/home/components/hero/hero";
-import { Footer } from "../pages/home/components/footer/footer";
+import { HomePage } from "./index";
+import { Header } from "./components/header/header";
+import { Hero } from "./components/hero/hero";
+import { Footer } from "./components/footer/footer";
 
-jest.mock("../pages/home/components/header/header");
-jest.mock("../pages/home/components/hero/hero");
-jest.mock("../pages/home/components/footer/footer");
+jest.mock("./components/header/header");
+jest.mock("./components/hero/hero");
+jest.mock("./components/footer/footer");
 
 describe("HomePage", () => {
   let homePage: HomePage;

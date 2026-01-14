@@ -1,4 +1,4 @@
-import { Header } from "../pages/home/components/header/header";
+import { Header } from "./header";
 
 describe("Header", () => {
   let header: Header;

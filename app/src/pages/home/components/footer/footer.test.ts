@@ -1,4 +1,4 @@
-import { Footer } from "../pages/home/components/footer/footer";
+import { Footer } from "./footer";
 
 describe("Footer", () => {
   let footer: Footer;

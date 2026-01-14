@@ -1,4 +1,4 @@
-import { Hero } from "../pages/home/components/hero/hero";
+import { Hero } from "./hero";
 
 describe("Hero", () => {
   let hero: Hero;
