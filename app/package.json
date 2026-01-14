@@ -1,0 +1,32 @@
+{
+  "name": "shortsmaker-frontend",
+  "version": "1.0.0",
+  "description": "Shortsmaker Frontend",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve . -l 45450",
+    "dev": "concurrently \"npm run watch\" \"browser-sync start --server --files '.' --port 45450 --no-open --no-notify --no-ui\"",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/**/*.ts",
+    "format": "prettier --write \"src/**/*.{ts,html,css}\""
+  },
+  "dependencies": {
+    "serve": "^14.2.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "browser-sync": "^3.0.4",
+    "concurrently": "^9.2.1",
+    "eslint": "^8.57.1",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "prettier": "^3.0.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.0.0"
+  }
+}
