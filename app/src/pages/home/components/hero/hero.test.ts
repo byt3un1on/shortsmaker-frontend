@@ -72,10 +72,11 @@ describe("Hero", () => {
     await submitHandler(mockEvent);
 
     expect(mockEvent.preventDefault).toHaveBeenCalled();
-    expect(global.fetch).toHaveBeenCalledWith(
-      "/api/v1/tickets?theme=Test%20Theme&description=Test%20Description",
-      { method: "POST" },
-    );
+    expect(global.fetch).toHaveBeenCalledWith("/api/v1/tickets", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ theme: "Test Theme", description: "Test Description" }),
+    });
     expect(mockStatus.textContent).toBe("Shorts gerados para tema: Test Theme");
   });
 

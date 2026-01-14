@@ -23,12 +23,13 @@ export class Hero {
         status.textContent = "Gerando shorts...";
 
         try {
-          const response = await fetch(
-            `/api/v1/tickets?theme=${encodeURIComponent(theme)}&description=${encodeURIComponent(description)}`,
-            {
-              method: "POST",
+          const response = await fetch("/api/v1/tickets", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
             },
-          );
+            body: JSON.stringify({ theme, description }),
+          });
 
           if (response.ok) {
             status.textContent = `Shorts gerados para tema: ${theme}`;
