@@ -5,3 +5,10 @@ services:
     ports:
       - "54545:80"
     restart: always
+    networks:
+      - shortsmaker-network
+
+networks:
+  shortsmaker-network:
+    external: true
+    name: app_shortsmaker-network
