@@ -14,15 +14,31 @@ export class Hero {
     if (form && status) {
       form.addEventListener("submit", async (e) => {
         e.preventDefault();
-        const theme = (document.getElementById("theme") as HTMLInputElement).value;
-        const description = (document.getElementById("description") as HTMLTextAreaElement).value;
+        const theme = (document.getElementById("theme") as HTMLInputElement)
+          .value;
+        const description = (
+          document.getElementById("description") as HTMLTextAreaElement
+        ).value;
 
         status.textContent = "Gerando shorts...";
 
-        // Simular API call
-        setTimeout(() => {
-          status.textContent = `Shorts gerados para tema: ${theme}`;
-        }, 2000);
+        try {
+          const response = await fetch(
+            `/api/v1/tickets?theme=${encodeURIComponent(theme)}&description=${encodeURIComponent(description)}`,
+            {
+              method: "POST",
+            },
+          );
+
+          if (response.ok) {
+            status.textContent = `Shorts gerados para tema: ${theme}`;
+          } else {
+            status.textContent = "Erro ao gerar shorts. Tente novamente.";
+          }
+        } catch (error) {
+          console.error("Erro ao conectar com a API:", error);
+          status.textContent = "Erro de conexão com o servidor.";
+        }
       });
     }
   }
