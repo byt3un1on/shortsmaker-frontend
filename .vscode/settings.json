@@ -1,0 +1,12 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "liveServer.settings.port": 45450,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "explorer.excludeGitIgnore": false,
+  "git.decorations.enabled": true,
+  "jest.rootPath": "app",
+  "jest.jestCommandLine": "npm test --",
+  "jest.configFile": "jest.config.js"
+}

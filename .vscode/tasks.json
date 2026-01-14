@@ -1,0 +1,48 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "npm: install",
+            "type": "shell",
+            "command": "npm install",
+            "problemMatcher": [],
+            "options": {
+                "cwd": "${workspaceFolder}/app"
+            }
+        },
+        {
+            "label": "npm: build",
+            "type": "shell",
+            "command": "npm run build",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$tsc"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/app"
+            }
+        },
+        {
+            "label": "npm: test",
+            "type": "shell",
+            "command": "npm run test",
+            "group": "test",
+            "problemMatcher": [],
+            "options": {
+                "cwd": "${workspaceFolder}/app"
+            }
+        },
+        {
+            "label": "npm: lint",
+            "type": "shell",
+            "command": "npm run lint",
+            "problemMatcher": [],
+            "options": {
+                "cwd": "${workspaceFolder}/app"
+            }
+        }
+    ]
+}

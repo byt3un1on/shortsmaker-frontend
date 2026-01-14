@@ -1,0 +1,35 @@
+{
+  "name": "Shortsmaker Frontend Dev Container",
+  "dockerComposeFile": ["docker-compose.yml"],
+  "service": "devcontainer",
+  "workspaceFolder": "/workspaces/shortsmaker/shortsmaker-frontend",
+  "remoteUser": "node",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+      "version": "latest",
+      "enableNonRootDocker": "true"
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/onstart.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Orta.vscode-jest",
+        "ms-vscode.vscode-typescript-next",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "ms-vscode.vscode-json",
+        "christian-kohler.path-intellisense",
+        "ritwickdey.LiveServer",
+        "mhutchie.git-graph",
+        "formulahendry.auto-rename-tag",
+        "bierner.markdown-mermaid",
+        "vscodevim.vim",
+        "VSpaceCode.whichkey",
+        "rebornix.project-config",
+        "fathulfahmy.lunarkeymap",
+        "JuniorSchmidt.lunar-vscode-theme"
+      ]
+    }
+  }
+}
